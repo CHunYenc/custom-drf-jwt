@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
+    'app_auth'
 ]
 
 MIDDLEWARE = [
@@ -120,3 +121,5 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
+# 更換預設的 User models
+AUTH_USER_MODEL = 'app_auth.User'
