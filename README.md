@@ -7,10 +7,10 @@
     - 加入 app_auth/urls.py 後，讓 core/urls.py 可以查看 app_auth/urls.py 的 URL
 - 第四個 commit ```關鍵```
     - 加入 core/settings.py 125 行，更改預設的 user models
-    - 增加 app_auth/models.py user(AbstractUser), 主要讓我們自定使用者
-      - None 為預設的欄位，我們系統不要.
+    - 增加 app_auth/models.py user(AbstractUser), 主要讓我們自定義使用者的欄位
+      - None 為預設的欄位，我們系統不需要，用成 None 後 Django 將不會生成欄位
       - 將預設登入的帳號欄位 - username，改為 account
-    - 增加 app_auth/models.py user_manager, 讓我們建立角色能夠使用我們自己建立的自定義 user models
+    - 增加 app_auth/models.py user_manager, 讓我們可以透過 ```createsuperuser``` 建立角色到自定義的 user models
     
 # 執行
 
