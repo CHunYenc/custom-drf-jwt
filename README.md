@@ -12,3 +12,17 @@
       - 將預設登入的帳號欄位 - username，改為 account
     - 增加 app_auth/models.py user_manager, 讓我們建立角色能夠使用我們自己建立的自定義 user models
     
+# 執行
+
+基本上因爲沒有前端建立使用者，所以就直接
+
+```
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser 
+^^^ 這邊建立完使用者才可以測試 /api/auth/token/ ^^^ 
+
+python manage.py runserver
+```
