@@ -26,3 +26,7 @@ python manage.py createsuperuser
 
 python manage.py runserver
 ```
+
+# 完成
+
+![e](./ok.png)
